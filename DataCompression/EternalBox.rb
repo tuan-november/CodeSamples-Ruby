@@ -1,6 +1,6 @@
 # =======================================================================================
 # DataCompression - Ruby Code Samples
-# Codec.rb
+# EternalBox.rb
 #
 # Written by Tuan Anh Nguyen - Software Engineer
 #                              www.MyAIvisions.com

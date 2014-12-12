@@ -64,7 +64,7 @@ private
     raise '--- ERROR ---: tree_traveller == nil'  if tree_traveller  == nil
     raise '--- ERROR ---: eternal_box == nil'     if eternal_box     == nil
 
-  	if tree_traveller != @root
+    if tree_traveller != @root
       eternal_box.encoded_sequence << tree_traveller.node_code
       encodeChar( tree_traveller.parent, eternal_box )
     else

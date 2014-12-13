@@ -121,17 +121,17 @@ private
   def populateCharTree( char_node_queue, eternal_box)
     raise '--- ERROR ---: char_node_queue == nil' if char_node_queue == nil
     raise '--- ERROR ---: eternal_box == nil'     if eternal_box == nil
-
-    first_two_nodes = char_node_queue[0..1]
-    parent = CCharNode.new
-    parent.left_child = first_two_nodes[0]
-    parent.right_child = first_two_nodes[1]
-    parent.frequency = first_two_nodes[0].frequency + first_two_nodes[1].frequency
     
-    first_two_nodes[0].parent = parent
-    first_two_nodes[0].node_code = '0'
-    first_two_nodes[1].parent = parent
-    first_two_nodes[1].node_code = '1'
+    first_node, second_node = char_node_queue[0..1]
+    parent = CCharNode.new
+    parent.left_child = first_node
+    parent.right_child = second_node
+    parent.frequency = first_node.frequency + second_node.frequency
+    
+    first_node.parent = parent
+    first_node.node_code = '0'
+    second_node.parent = parent
+    second_node.node_code = '1'
 
     char_node_queue = char_node_queue[2 .. char_node_queue.length - 1]
     char_node_queue << parent
